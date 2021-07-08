@@ -14,7 +14,7 @@ module.exports = {
   projectName: 'miraicle', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'miraicle',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -24,8 +24,9 @@ module.exports = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorial',
+          label: '文档',
         },
+        // {to: '/api', label: 'API', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/Excaive/miraicle',
