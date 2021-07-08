@@ -3,15 +3,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  title: 'miraicle',
+  tagline: 'A Python SDK with async I/O based on mirai-api-http.',
+  url: 'https://excaive.github.io',
+  baseUrl: '/miraicle/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Excaive', // Usually your GitHub org/user name.
+  projectName: 'miraicle', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'My Site',
@@ -28,7 +28,7 @@ module.exports = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/Excaive/miraicle',
           label: 'GitHub',
           position: 'right',
         },
