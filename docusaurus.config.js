@@ -21,13 +21,12 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
+          to: 'docs/install',
           position: 'left',
-          label: '文档',
+          routeBasePath: 'docs',
+          label: '指南',
         },
-        // {to: '/api', label: 'API', position: 'left'},
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/Excaive/miraicle',
           label: 'GitHub',
@@ -39,46 +38,46 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: '指南',
+              to: '/docs/install',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '社区',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Github Discussions',
+              href: 'https://github.com/Excaive/miraicle/discussions',
             },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
+            // {
+            //   label: 'Discord',
+            //   href: 'https://discordapp.com/invite/docusaurus',
+            // },
+            // {
+            //   label: 'Twitter',
+            //   href: 'https://twitter.com/docusaurus',
+            // },
           ],
         },
         {
-          title: 'More',
+          title: '更多',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+            // {
+            //   label: 'Blog',
+            //   to: '/blog',
+            // },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Excaive/miraicle',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Excaive. Built with Docusaurus.`,
     },
     prism: {
       theme: lightCodeTheme,
