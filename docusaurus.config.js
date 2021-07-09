@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'miraicle',
-  tagline: 'A Python SDK with async I/O based on mirai-api-http.',
+  tagline: '一个基于 mirai-api-http 的轻量级 Python SDK',
   url: 'https://excaive.github.io',
   baseUrl: '/miraicle/',
   onBrokenLinks: 'throw',
@@ -27,7 +27,7 @@ module.exports = {
         //   label: '指南',
         // },
         {
-          to: 'docs/guides/install',
+          to: 'docs/guides/intro',
           position: 'left',
           activeBasePath: 'docs/guides',
           // routeBasePath: 'docs',
@@ -56,7 +56,7 @@ module.exports = {
           items: [
             {
               label: '指南',
-              to: '/docs/guides/install',
+              to: '/docs/guides/intro',
             },
           ],
         },
