@@ -20,11 +20,25 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
+        // {
+        //   to: 'docs/install',
+        //   position: 'left',
+        //   routeBasePath: 'docs',
+        //   label: '指南',
+        // },
         {
-          to: 'docs/install',
+          to: 'docs/guides/install',
           position: 'left',
-          routeBasePath: 'docs',
+          activeBasePath: 'docs/guides',
+          // routeBasePath: 'docs',
           label: '指南',
+        },
+        {
+          to: 'docs/api/install',
+          position: 'left',
+          activeBasePath: 'docs/api',
+          // routeBasePath: 'docs',
+          label: 'API',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -42,7 +56,7 @@ module.exports = {
           items: [
             {
               label: '指南',
-              to: '/docs/install',
+              to: '/docs/guides/install',
             },
           ],
         },
