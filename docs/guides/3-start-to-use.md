@@ -8,7 +8,7 @@ sidebar_position: 3
 
 现在一切工作已经准备完成，你可以开始动手写自己的 bot 了。打开你最熟悉的编辑器或 IDE ，创建一个名为 `bot.py` 的文件，内容如下：
 
-``` python
+``` python title='bot.py'
 import miraicle
 
 
@@ -22,7 +22,7 @@ def hello_to_friend(bot: miraicle.Mirai, msg: miraicle.FriendMessage):
     bot.send_friend_msg(qq=msg.sender, msg='Hello world!')
 
 
-qq = 123456789              # 你登陆的机器人 QQ 号
+qq = 123456789              # 你登录的机器人 QQ 号
 verify_key = 'miraicle'     # 你在 setting.yml 中设置的 verifyKey
 port = 8080                 # 你在 setting.yml 中设置的 port (http)
 
@@ -30,7 +30,7 @@ bot = miraicle.Mirai(qq=qq, verify_key=verify_key, port=port)
 bot.run()
 ```
 
-将变量 `qq` 修改为你登陆的机器人的 QQ 号，并根据你在 `mirai-api-http` 的配置修改 `verify_key` 和 `port` 的值，然后运行。如果你的设置是正确的，程序会输出类似于这样的内容：
+将变量 `qq` 修改为你登录的机器人的 QQ 号，并根据你在 `mirai-api-http` 的配置修改 `verify_key` 和 `port` 的值，然后运行。如果你的设置是正确的，程序会输出类似于这样的内容：
 
 ```
 method '__http_verify' has called

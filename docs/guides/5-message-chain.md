@@ -15,12 +15,15 @@ sidebar_position: 5
 ``` python
 @miraicle.Mirai.receiver('GroupMessage')
 def hello_to_group(bot: miraicle.Mirai, msg: miraicle.GroupMessage):
-    bot.send_group_msg(group=msg.group, msg=[miraicle.Plain('Hello world!'),
-                                             miraicle.Face().from_face_id(74),
-                                             miraicle.At(qq=msg.sender)])
+    if msg.plain in ['Hello', 'hello']:
+        bot.send_group_msg(group=msg.group, msg=[miraicle.Plain('Hello world!'),
+                                                 miraicle.Face().from_face_id(74),
+                                                 miraicle.At(qq=msg.sender)])
 ```
 
-运行程序，现在当你发送一条群消息之后，bot 会发送带有表情的 'Hello world!' ，并 at 你。
+我们不希望 bot 对群里每一条消息都做回应，造成刷屏，所以我们使用了一条选择语句。现在，只有当消息的文字内容为 'Hello' 或 'hello' 的时候，bot 才会响应。
+
+运行程序，试着在群里向 bot 问好。bot 会发送带有表情的 'Hello world!'，并 at 你。
 
 下面对各种消息元素进行介绍，你可以使用这些消息元素，构造更加复杂的消息链。
 

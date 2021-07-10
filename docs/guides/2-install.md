@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## 安装 miraicle
 
-和很多其他的 `Python` 第三方库一样，你可以从 `PyPi` 安装 `miraicle`，这需要你的版本在 3.6 或以上。
+和很多其他的 `Python` 第三方库一样，你可以从 `PyPi` 安装 `miraicle`，这需要你的 `Python` 版本在 3.6 或以上。
 
 ``` bash
 pip install miraicle

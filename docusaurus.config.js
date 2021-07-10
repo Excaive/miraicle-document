@@ -17,7 +17,7 @@ module.exports = {
       title: 'miraicle',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/strawberry_blue.svg',
       },
       items: [
         // {
@@ -30,15 +30,19 @@ module.exports = {
           to: 'docs/guides/intro',
           position: 'left',
           activeBasePath: 'docs/guides',
-          // routeBasePath: 'docs',
           label: '指南',
         },
         {
-          to: 'docs/api/install',
+          to: 'docs/api/intro',
           position: 'left',
           activeBasePath: 'docs/api',
-          // routeBasePath: 'docs',
           label: 'API',
+        },
+        {
+          to: 'docs/changelog/changelog',
+          position: 'right',
+          activeBasePath: 'docs/changelog',
+          label: '更新日志',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -57,6 +61,14 @@ module.exports = {
             {
               label: '指南',
               to: '/docs/guides/intro',
+            },
+            {
+              label: 'API',
+              to: '/docs/api/intro',
+            },
+            {
+              label: '更新日志',
+              to: '/docs/changelog/changelog',
             },
           ],
         },
@@ -87,6 +99,10 @@ module.exports = {
             {
               label: 'GitHub',
               href: 'https://github.com/Excaive/miraicle',
+            },
+            {
+              label: 'PyPi',
+              href: 'https://pypi.org/project/miraicle',
             },
           ],
         },

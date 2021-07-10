@@ -4,33 +4,30 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: '轻量',
+    Svg: require('../../static/img/home.svg').default,
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <p align='left'>
+        基于 <code>mirai-api-http</code> 的微框架，小巧灵活，易于上手。
+      </p>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: '自由',
+    Svg: require('../../static/img/forest.svg').default,
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <p align='left'>
+        用哪一种方式与 <code>mirai-api-http</code> 通信，用同步还是异步，由你决定。
+      </p>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: '可扩展',
+    Svg: require('../../static/img/iceberg.svg').default,
     description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
+      <p align='left'>
+        接收器和过滤器的设计，让你可以用更简洁、更 <code>pythonic</code> 的方法编写复杂逻辑。
+      </p>
     ),
   },
 ];

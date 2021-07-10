@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# 发生了什么
+# 发生了什么？
 
 ## 创建 Mirai 实例
 
@@ -15,7 +15,7 @@ bot.run()
 
 我们创建了一个 `Mirai` 实例，传入了 `qq`、`verify_key` 和 `port` 参数，并让它执行了 `run` 方法。它会和 `mirai-api-http` 建立连接，获取最近的事件和消息。
 
-:::warning
+:::info
 
 `run` 是个阻塞的方法，这意味着如果你的程序写在这条语句的后面，它将无法执行。
 
