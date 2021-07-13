@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('../../static/img/iceberg.svg').default,
     description: (
       <p align='left'>
-        接收器和过滤器的设计，让你可以用更简洁、更 <code>pythonic</code> 的方法编写复杂逻辑。
+        接收器和过滤器的设计，让你可以用更简洁、更 pythonic 的方法编写复杂逻辑。
       </p>
     ),
   },
