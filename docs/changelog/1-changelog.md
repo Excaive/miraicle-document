@@ -4,6 +4,16 @@ sidebar_position: 1
 
 # 更新日志
 
+## v0.3.6
+> 发布于 2021.07.30
+
+- 将 `Mirai` 和 `AsyncMirai` 类设置为单例模式，仅允许分别创建一个实例
+- 给 `Mirai` 和 `AsyncMirai` 类添加 `session_info` 方法，用以获取 `session` 信息（[`mirai-api-http-v2.1.0`](https://github.com/project-mirai/mirai-api-http/releases/tag/v2.1.0)）
+- 给 `Message` 类添加 `at_me` 方法，可判断收到的消息中是否 at 了 bot
+- 给 `Image`、`FlashImage` 和 `Voice` 类添加 `base64` 属性；添加 `from_base64` 方法，可通过传递 `base64` 编码（`bytes`）或路径（`str`）来构建相应的对象（[#1](https://github.com/Excaive/miraicle/issues/1)）
+- 更改了 bot 发送的消息在终端的显示形式
+- 修复了 `FlashImage` 显示成 `Image` 的问题
+
 ## v0.3.5
 > 发布于 2021.07.09
 
