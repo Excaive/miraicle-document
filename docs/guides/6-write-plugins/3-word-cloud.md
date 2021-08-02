@@ -239,7 +239,7 @@ def word_cloud(bot: miraicle.Mirai, msg: miraicle.GroupMessage):
 
 最后，把绘制好的词云发送到群里。在 `miraicle` 中，`Image` 类有 `path`、`url`、`image_id`、`base64` 四种属性，填写其中任意一个均可以构造有效的 `Image` 对象。这里我们选择使用 `base64` 来构造。`Image` 类提供了工厂方法 `from_base64`，把词云图片的字节串用 `base64` 编码后传入该方法即可。
 
-我们依然使用 `send_group_msg` 方法来让 bot 发送消息。可以把 `quote` 参数指定为传入消息的 `id`，`bot` 会对这条消息进行回复。
+我们依然使用 `send_group_msg` 方法来让 bot 发送消息。可以把 `quote` 参数指定为传入消息的 `id`，bot 会对这条消息进行回复。
 
 由于生成词云的时间可能较长，可以让 bot 在收到触发词后，先回复一句 “正在生成本群词云”。完整代码如下：
 

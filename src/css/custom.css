@@ -15,6 +15,7 @@
   --ifm-color-primary-lighter: #9cdeff;
   --ifm-color-primary-lightest: #d1f0ff;
   --ifm-code-font-size: 95%;
+  --ifm-alert-color: #00a7fa;
 }
 
 .docusaurus-highlight-code-line {
@@ -26,4 +27,22 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.admonition-info {
+  color: #000000;
+  background-color: #d1f0ff;
+  border-left: 7px solid #66ccff;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.admonition-info .admonition-icon svg {
+  fill: #00a7fa;
+}
+
+code {
+  border-width: 1.5px;
+  border-color: #bbbbbb22;
 }
