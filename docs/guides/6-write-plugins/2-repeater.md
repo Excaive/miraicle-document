@@ -8,11 +8,13 @@ sidebar_position: 2
 
 在 `plugins` 文件夹中新建一个 `repeat.py` 文件。现在，你的目录应该像这样：
 
-```
+``` text
 miraicle-example
 ├── plugins
 │   ├── __init__.py
+# highlight-start
 │   ├── repeat.py
+# highlight-end
 │   └── hello.py
 └── bot.py
 ```

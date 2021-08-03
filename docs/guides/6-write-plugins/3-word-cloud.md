@@ -56,15 +56,19 @@ connect.close()
 
 现在我们可以开始编写真正的功能了。和之前一样，编写新功能的时候，在 `plugins` 文件夹中新建一个文件，我们把它命名为 `word_cloud.py`。再新建一个文件夹，把刚才生成的 `word_cloud.db` 移动到里面。你的目录变成了这样：
 
-```
+``` text
 miraicle-example
+# highlight-start
 ├── database
 │   └── word_cloud.db
+# highlight-end
 ├── plugins
 │   ├── __init__.py
 │   ├── repeat.py
 │   ├── hello.py
+# highlight-start
 │   └── word_cloud.py
+# highlight-end
 └── bot.py
 ```
 
