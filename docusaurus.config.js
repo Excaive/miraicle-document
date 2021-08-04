@@ -18,7 +18,7 @@ module.exports = {
       title: 'miraicle',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/strawberry_blue.svg',
+        src: 'img/berry.svg',
       },
       items: [
         // {

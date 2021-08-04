@@ -133,7 +133,7 @@ def word_cloud(bot: miraicle.Mirai, msg: miraicle.GroupMessage):
 
 ### 分词
 
-从数据库获取到消息之后，就可以对它们进行分词了。你可以查阅 `jieba` 的 [文档](https://github.com/fxsjy/jieba) 来了解它的用法。分词完成后，使用一个字典来记录每个词语出现的次数：
+从数据库获取到消息之后，就可以对它们进行分词了。你可以查阅 [`jieba`](https://github.com/fxsjy/jieba) 的文档来了解它的用法。分词完成后，使用一个字典来记录每个词语出现的次数：
 
 ``` python title='word_cloud.py'
 import miraicle
