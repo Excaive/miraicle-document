@@ -29,23 +29,77 @@ def hello_to_group(bot: miraicle.Mirai, msg: miraicle.GroupMessage):
 
 ## 文字 (Plain)
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `text`  |  `str`  |  消息内容  |
+
+构造方法：
+
+``` python
+miraicle.Plain('Hello world!')
+```
 
 ## At
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `qq`  |  `int`  |  at 的群员的 QQ 号  |
+|  `display`  |  `str`  |  at 时显示的文字，可选，仅接收消息时有效；发送消息时无效，自动显示群名片  |
+
+构造方法：
+
+``` python
+miraicle.At('Hello world!')
+```
 
 ## At 全体成员 (AtAll)
 
-TODO
+构造方法：
+
+``` python
+miraicle.AtAll()
+```
 
 ## 表情 (Face)
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `face_id`  |  `int`  |  QQ 表情编号，可选，优先高于 `name`  |
+|  `name`  |  `str`  |  QQ 表情名称，可选  |
+
+构造方法：
+
+``` python
+miraicle.Face(face_id=74)
+miraicle.Face(name='太阳')
+```
+
+你也可以使用 `Face` 类提供的静态工厂方法 `from_face_id` 或 `from_name` 来构造 `Face` 对象：
+
+``` python
+miraicle.Face.from_face_id(74)
+miraicle.Face.from_name('太阳')
+```
 
 ## 图片 (Image)
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `path`  |  `str`  |  图片的路径，发送本地图片，相对路径于 `data\net.mamoe.mirai-api-http\images`  |
+|  `url`  |  `str`  |  图片的 `url`，发送时可作网络图片的链接；接收时为腾讯图片服务器的链接，可用于图片下载  |
+|  `image_id`  |  `str`  |  图片的 `image_id`，群图片与好友图片格式不同  |
+|  `base64`  |  `bytes` 或 `str`  |  如果是 `bytes` 则为图片的 `base64` 编码，如果是 `str` 则为图片路径，`miraicle` 会读取图片并以 `base64` 的形式编码；接收时为空  |
+
+构造方法：
+
+``` python
+miraicle.Image(path='a.png')                # 该文件在 `data\net.mamoe.mirai-api-http\images` 目录下
+miraicle.Image(url='https://github.com/mamoe/mirai/blob/dev/docs/mirai.png')    # 发送网络图片
+miraicle.Image(url=r'file:\\\D:\b.gif')     # 发送本地图片，只能用绝对路径，前缀 `file:\\\` 不可省略
+miraicle.Image(image_id='{B407F708-A2C6-A506-3420-98DF7CAC4A57}.jpg')           # 使用 image_id 发送图片
+miraicle.Image(base64=base64.b64encode(open('c.png', 'rb').read()))             # 使用 base64 发送图片
+miraicle.Image(base64='c.png')              # miraicle 读取图片并以 base64 的形式编码发送
+```
 
 ## 闪照 (FlashImage)
 
