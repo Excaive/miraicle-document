@@ -101,34 +101,119 @@ miraicle.Image(base64=base64.b64encode(open('c.png', 'rb').read()))             
 miraicle.Image(base64='c.png')              # miraicle 读取图片并以 base64 的形式编码发送
 ```
 
+你也可以使用 `Image` 类提供的静态工厂方法 `from_file`、`from_url`、`from_id` 或 `from_base64` 来构造 `Image` 对象：
+
+``` python
+miraicle.Image.from_file('a.jpg')
+miraicle.Image.from_url('https://github.com/mamoe/mirai/blob/dev/docs/mirai.png')
+miraicle.Image.from_url(r'file:\\\D:\b.gif')
+miraicle.Image.from_id('{B407F708-A2C6-A506-3420-98DF7CAC4A57}.jpg')
+miraicle.Image.from_base64(base64.b64encode(open('c.png', 'rb').read()))
+miraicle.Image.from_base64('c.png')
+```
+
 ## 闪照 (FlashImage)
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `path`  |  `str`  |  图片的路径，发送本地图片，相对路径于 `data\net.mamoe.mirai-api-http\images`  |
+|  `url`  |  `str`  |  图片的 `url`，发送时可作网络图片的链接；接收时为腾讯图片服务器的链接，可用于图片下载  |
+|  `image_id`  |  `str`  |  图片的 `image_id`，群图片与好友图片格式不同  |
+|  `base64`  |  `bytes` 或 `str`  |  如果是 `bytes` 则为图片的 `base64` 编码，如果是 `str` 则为图片路径，`miraicle` 会读取图片并以 `base64` 的形式编码；接收时为空  |
+
+构造方法：
+
+``` python
+miraicle.FlashImage(path='a.png')                # 该文件在 `data\net.mamoe.mirai-api-http\images` 目录下
+miraicle.FlashImage(url='https://github.com/mamoe/mirai/blob/dev/docs/mirai.png')    # 发送网络图片
+miraicle.FlashImage(url=r'file:\\\D:\b.gif')     # 发送本地图片，只能用绝对路径，前缀 `file:\\\` 不可省略
+miraicle.FlashImage(image_id='{B407F708-A2C6-A506-3420-98DF7CAC4A57}.jpg')           # 使用 image_id 发送图片
+miraicle.FlashImage(base64=base64.b64encode(open('c.png', 'rb').read()))             # 使用 base64 发送图片
+miraicle.FlashImage(base64='c.png')              # miraicle 读取图片并以 base64 的形式编码发送
+```
+
+你也可以使用 `FlashImage` 类提供的静态工厂方法 `from_file`、`from_url`、`from_id` 或 `from_base64` 来构造 `FlashImage` 对象：
+
+``` python
+miraicle.FlashImage.from_file('a.jpg')
+miraicle.FlashImage.from_url('https://github.com/mamoe/mirai/blob/dev/docs/mirai.png')
+miraicle.FlashImage.from_url(r'file:\\\D:\b.gif')
+miraicle.FlashImage.from_id('{B407F708-A2C6-A506-3420-98DF7CAC4A57}.jpg')
+miraicle.FlashImage.from_base64(base64.b64encode(open('c.png', 'rb').read()))
+miraicle.FlashImage.from_base64('c.png')
+```
 
 ## 语音 (Voice)
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `path`  |  `str`  |  语音的路径，发送本地语音，相对路径于 `data\net.mamoe.mirai-api-http\voices`  |
+|  `url`  |  `str`  |  语音的 `url`，发送时可作网络语音的链接；接收时为腾讯语音服务器的链接，可用于语音下载  |
+|  `voice_id`  |  `str`  |  语音的 `voice_id`  |
+|  `base64`  |  `bytes` 或 `str`  |  如果是 `bytes` 则为语音的 `base64` 编码，如果是 `str` 则为语音路径，`miraicle` 会读取语音并以 `base64` 的形式编码；接收时为空  |
+
+构造方法：
+
+``` python
+miraicle.Voice(path='a.amr')                # 该文件在 `data\net.mamoe.mirai-api-http\voices` 目录下
+miraicle.Voice(url='https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')               # 发送网络语音
+miraicle.Voice(url=r'file:\\\D:\b.amr')     # 发送本地语音，只能用绝对路径，前缀 `file:\\\` 不可省略
+miraicle.Voice(voice_id='23C477720A37FEB6A9EE4BCCF654014F.amr')             # 使用 image_id 发送语音
+miraicle.Voice(base64=base64.b64encode(open('c.wav', 'rb').read()))         # 使用 base64 发送语音
+miraicle.Voice(base64='c.wav')              # miraicle 读取语音并以 base64 的形式编码发送
+```
+
+你也可以使用 `Voice` 类提供的静态工厂方法 `from_file`、`from_url`、`from_id` 或 `from_base64` 来构造 `Voice` 对象：
+
+``` python
+miraicle.Voice.from_file('a.amr')
+miraicle.Voice.from_url('https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+miraicle.Voice.from_url(r'file:\\\D:\b.amr')
+miraicle.Voice.from_id('23C477720A37FEB6A9EE4BCCF654014F.amr')
+miraicle.Voice.from_base64(base64.b64encode(open('c.wav', 'rb').read()))
+miraicle.Voice.from_base64('c.wav')
+```
 
 ## Xml
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `xml`  |  `str`  |  `xml` 文本  |
 
 ## Json
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `json`  |  `str`  |  `json` 文本  |
 
 ## App
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `content`  |  `str`  |  内容  |
 
 ## Poke
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `name`  |  `str`  |  戳一戳的类型  |
 
 ## 骰子 (Dice)
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `value`  |  `int`  |  骰子点数，范围 1 ~ 6，如果不指定则随机生成  |
+
+构造方法：
+``` python
+miraicle.Dice()
+miraicle.Dice(6)
+```
 
 ## 文件 (File)
 
-TODO
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `file_id`  |  `str`  |  文件识别 id  |
+|  `name`  |  `str`  |  文件名  |
+|  `size`  |  `int`  |  文件大小  |
