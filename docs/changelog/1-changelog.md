@@ -4,6 +4,15 @@ sidebar_position: 1
 
 # 更新日志
 
+## v0.3.7
+> 发布于 2021.08.10
+
+- 优化了 `Mirai` 和 `AsyncMirai` 类中 `ws adapter` 的处理方式
+- 新增对 `MiraiCode` 的支持，可作为一种消息类型（[`mirai-api-http-v2.2.0`](https://github.com/project-mirai/mirai-api-http/releases/tag/v2.2.0)）
+- `Mirai` 和 `AsyncMirai` 类的 `file_list` 和 `file_info` 方法新增参数 `with_download_info`，可返回额外的下载信息（[`mirai-api-http-v2.2.0`](https://github.com/project-mirai/mirai-api-http/releases/tag/v2.2.0)）
+- 对 bot 发送的消息在终端的显示形式作进一步调整，可显示消息的 `id`、类型和发送的对象
+- 移除 `Mirai` 类中已废弃的 `group_file_list` 和 `group_file_info` 方法
+
 ## v0.3.6
 > 发布于 2021.07.30
 

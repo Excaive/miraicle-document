@@ -217,3 +217,16 @@ miraicle.Dice(6)
 |  `file_id`  |  `str`  |  文件识别 id  |
 |  `name`  |  `str`  |  文件名  |
 |  `size`  |  `int`  |  文件大小  |
+
+## mirai 码 (MiraiCode)
+
+|  参数  |  类型  | 说明  |
+|  ----  |  ----  |  ----  |
+|  `code`  |  `str`  |  mirai 码  |
+
+构造方法：
+``` python
+mirai.MiraiCode('Hello world![mirai:face:74][mirai:atall]')
+```
+
+你可以通过阅读 `mirai` 的 [文档](https://github.com/mamoe/mirai/blob/dev/docs/Messages.md#mirai-%E7%A0%81) 来了解 mirai 码的组成。
