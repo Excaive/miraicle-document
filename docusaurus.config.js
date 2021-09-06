@@ -34,7 +34,7 @@ module.exports = {
           label: '指南',
         },
         {
-          to: 'docs/api/intro',
+          to: 'docs/api/mirai',
           position: 'left',
           activeBasePath: 'docs/api',
           label: 'API',
@@ -65,7 +65,7 @@ module.exports = {
             },
             {
               label: 'API',
-              to: '/docs/api/intro',
+              to: '/docs/api/mirai',
             },
             {
               label: '更新日志',
