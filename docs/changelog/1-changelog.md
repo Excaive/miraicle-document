@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # 更新日志
 
+## v0.3.8
+> 发布于 2021.09.06
+
+- **【修复】** 修复了 `Mirai` 和 `AsyncMirai` 类中 `is_owner` 和 `is_administrator` 方法抛出异常的问题，以及判断 bot 自身权限结果错误的问题
+- **【修复】** 修复了 `Mirai` 和 `AsyncMirai` 类中 `mute`、`unmute`、`kick`、`quit`、`mute_all`、`unmute_all` 方法无效的问题（[#12](https://github.com/Excaive/miraicle/discussions/12)）
+
 ## v0.3.7
 > 发布于 2021.08.10
 
