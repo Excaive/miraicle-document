@@ -4,6 +4,11 @@ sidebar_position: 1
 
 # 更新日志
 
+## v0.3.9
+> 发布于 2021.09.06
+
+- **【修复】** 修复了 `Mirai` 和 `AsyncMirai` 类中 `recall` 方法无效的问题（[#12](https://github.com/Excaive/miraicle/discussions/12)）
+
 ## v0.3.8
 > 发布于 2021.09.06
 
