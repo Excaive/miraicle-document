@@ -4,6 +4,18 @@ sidebar_position: 1
 
 # 更新日志
 
+## v0.3.10
+> 发布于 2021.10.07
+
+- **【新增】** 给 `Mirai` 和 `AsyncMirai` 类添加 `member_admin` 方法，用于修改群员的管理员权限（[mirai-api-http-v2.3.0](https://github.com/project-mirai/mirai-api-http/releases/tag/v2.3.0)）
+- **【新增】** 给 `Mirai` 和 `AsyncMirai` 类的 `file_list`、`file_info` 方法添加 `path` 参数用于模糊定位（群文件相同目录可重名）, 优先级高于 `dir_id` 和 `file`（[mirai-api-http-v2.3.0](https://github.com/project-mirai/mirai-api-http/releases/tag/v2.3.0)）
+- **【新增】** 给 `Voice` 类添加 `length` 参数（[mirai-api-http-v2.3.0](https://github.com/project-mirai/mirai-api-http/releases/tag/v2.3.0)）
+- **【新增】** 给 `Mirai` 和 `AsyncMirai` 类添加 `delete_friend` 方法，用于删除好友；添加 `set_essence` 方法，用于设置群精华消息
+- **【新增】** 给 `Message` 类添加 `voice` 方法，可返回消息链中的语音
+- **【优化】** `Mirai` 类使用线程池，降低线程创建和销毁造成的开销
+- **【调整】** `Mirai` 和 `AsyncMirai` 类的 `recall` 方法 `id` 参数更改为 `msg_id`
+- **【弃用】** 统一接口名称，弃用 `Mirai` 和 `AsyncMirai` 类中的 `get_version`、`get_friend_list`、`get_group_list`、`get_member_list` 方法，由 `version`、`friend_list`、`group_list`、`member_list` 代替
+
 ## v0.3.9
 > 发布于 2021.09.06
 
@@ -77,7 +89,7 @@ sidebar_position: 1
 > 发布于 2021.06.22
 
 - **【修复】** 修复了使用 `ws adapter` 时 `Mirai` 类的方法没有返回值的问题
-- **【弃用】** 弃用了 `mirai-api-http` 2.x 中移除的 `group_file_list` 和 `group_file_info` 方法
+- **【弃用】** 弃用了 `mirai-api-http` 2.x 中移除的 `group_file_list` 和 `group_file_info` 方法，由 `file_list`、`file_info` 代替
 
 ## v0.2.1
 > 发布于 2021.06.21
