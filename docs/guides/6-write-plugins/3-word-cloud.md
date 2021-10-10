@@ -30,7 +30,9 @@ pip install wordcloud
 
 不过，使用哪一个属性作为主键呢？数据库要求每条记录有唯一的主键，而以上属性似乎都不能保证是唯一的。如果你在使用 `miraicle` 的时候注意过控制台输出的内容，你可能知道每条消息都有一个 `id`，使用它作为主键行不行？在同一个群中，消息的 `id` 是递增的，因此具有唯一性；然而如果是两个不同的群，也有可能出现相同的 `id`。
 
-我们可以额外设定一个主键，当插入新记录的时候进行主键自增：
+我们可以额外设定一个主键，当插入新记录的时候进行主键自增。
+
+随着数据量的增长，为了保持查询速度，还应当创建索引。由于我们查找的是某个群的历史消息，所以我们在群号上创建索引。如果你还有绘制个人词云的需求，还可以对消息发送者创建索引。
 
 ``` python title='create_db.py'
 import sqlite3
@@ -40,11 +42,13 @@ connect = sqlite3.connect('word_cloud.db')
 cursor = connect.cursor()
 cursor.execute(
     'CREATE TABLE msgs'
-    '(id        INTEGER PRIMARY KEY autoincrement,'
+    '(id        INTEGER PRIMARY KEY AUTOINCREMENT,'
     'time       INT,'
     'sender_id  INT,'
     'group_id   INT,'
     'msg        TEXT)')
+
+cursor.execute('CREATE INDEX idx_group_id ON msgs(group_id)')
 
 connect.commit()
 connect.close()

@@ -20,7 +20,7 @@ sidebar_position: 2
 |  `session_key`  |  `Optional[str]`  |  经过校验得到的 session 号，可选  |
 |  `adapter`  |  `str`  |  连接方式，支持 http 和 ws，默认为 http  |
 
-###  *coroutine* `get_version()`
+###  *coroutine* `version()`
 
 - **说明：** 获取 `mirai-api-http` 的版本号
 
@@ -69,12 +69,6 @@ sidebar_position: 2
 
 - **返回：** `mirai-api-http` 的响应
 
-### *coroutine* `get_friend_list()`
-
-- **说明：** 获取好友列表
-
-- **返回：** 好友列表
-
 ### *coroutine* `recall(id)`
 
 - **说明：** 撤回消息
@@ -87,13 +81,19 @@ sidebar_position: 2
 
 - **返回：** `mirai-api-http` 的响应
 
-### *coroutine* `get_group_list()`
+### *coroutine* `friend_list()`
+
+- **说明：** 获取好友列表
+
+- **返回：** 好友列表
+
+### *coroutine* `group_list()`
 
 - **说明：** 获取群列表
 
 - **返回：** 群列表
 
-### *coroutine* `get_member_list(group)`
+### *coroutine* `member_list(group)`
 
 - **说明：** 获取群成员列表
 
